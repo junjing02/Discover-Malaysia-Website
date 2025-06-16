@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Malaysia</title>
+		<link rel="icon"type=image/x-icon href="https://cdn-icons-png.flaticon.com/512/2151/2151402.png">
+
+		<!-- css -->
+		<link rel="stylesheet" href="./component.css" type="text/css">
+		<link rel="stylesheet" href="./about.css" type="text/css">
+
+		<!-- font awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!--bootstrap-->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+        referrerpolicy="no-referrer"></script>
+    
+	</head>
+
+
+	
+	<body>
+		<div id='logout-item' style='display: none'>
+			<p>
+				How are you ？
+			  </p>
+			<button class='logoutbtn'>LOGOUT</button>
+			<button class='cancelbtn'>CANCEL</button>
+		</div>
+	
+		<div class="menu">
+			<nav role="navigation" class="nav-menu">
+				<a href="./index.html" aria-current="page" class="menu-item-wrap">
+					<div class="menu-item">1M</div>
+					<div class="menu-item-deco-line"></div>
+				</a>
+				<a href="./about.html" aria-current="page" class="menu-item-wrap">
+					<div class="menu-item">About</div>
+					<div class="menu-item-deco-line"></div>
+				</a>
+				<a href="./experience.html" aria-current="page" class="menu-item-wrap">
+					<div class="menu-item">Experience</div>
+					<div class="menu-item-deco-line"></div>
+				</a>
+				<a href="./hotel.html" aria-current="page" class="menu-item-wrap">
+					<div class="menu-item">Hotel</div>
+					<div class="menu-item-deco-line"></div>
+				</a>
+				<a href="./alert.html" aria-current="page" class="menu-item-wrap">
+					<div class="menu-item">Alert</div>
+					<div class="menu-item-deco-line"></div>
+				</a>
+				<button class="menu-item-wrap" id="login">
+					<div class="menu-item">Login</div>				
+				</button>
+				<button class="menu-item-wrap" id="logout">
+					<div class="menu-item" id="user"></div>				
+				</button>
+			</nav>
+		</div>
+	
+		<div class="mobileMenu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="./index.html" style="margin: 10px 20px">1MALAYSIA</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+					style="margin: 10px 20px">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="mmenu">
+							<a class="nav-link" href="./about.html">
+								<div class="menu-item">About</div>
+							</a>
+						</li>
+						<li class="mmenu">
+							<a class="nav-link" href="./experience.html">
+								<div class="menu-item">Experience</div>
+							</a>
+						</li>
+						<li class="mmenu">
+							<a class="nav-link" href="./hotel.html">
+								<div class="menu-item">Hotel</div>
+							</a>
+						</li>
+						<li class="mmenu">
+							<a class="nav-link" href="./alert.html">
+								<div class="menu-item">Alert</div>
+							</a>
+						</li>
+						<li class="mmenu">
+							<a class="nav-link" href="#" role="button" id="logoutm">
+								<div class="menu-item">
+									<div class="menu-item" id="userm"></div>
+								</div>
+							</a>
+							<a class="nav-link" href="#" role="button" id="loginm">
+								<div class="menu-item">login								
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	
+
+		<div class="header-section">
+			<div class="header-image">
+				<div class="header-content">
+					<div class="header-text">
+						<p class="header-headline">Malaysia</p>
+						<p id="test">Let's Discover Our Country</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--bs tabs-->
+		<div class="wrap">
+			<div class="nav-tab" id="myTab" role="tablist">
+				<div class="nav-item" role="presentation">
+				  <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane" type="button" role="tab" aria-controls="about-tab-pane" aria-selected="true">ABOUT MALAYSIA</button>
+				</div>
+				<div class="nav-item" role="presentation">
+				  <button class="nav-link" id="enter-tab" data-bs-toggle="tab" data-bs-target="#enter-tab-pane" type="button" role="tab" aria-controls="enter-tab-pane" aria-selected="false">ENTERING MALAYSIA</button>
+				</div>
+				<div class="nav-item" role="presentation">
+				  <button class="nav-link" id="guide-tab" data-bs-toggle="tab" data-bs-target="#guide-tab-pane" type="button" role="tab" aria-controls="guide-tab-pane" aria-selected="false">TRAVEL GUIDE</button>
+				</div>
+			</div>
+		</div>
+
+		
+		  <div class="tab-content" id="myTabContent">
+			<div class="content tab-pane fade show active" id="about-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+				<div class="wrap">
+					<div class="inner-wrap">
+						<div class="side-image-wrap-right">
+							<img class="side-image" src="https://www.malaysia.travel/img/about-1.jpg" alt="this is img">
+						</div>
+						<div class="text-wrap-left">
+							<h2>Geography</h2>
+							<p class="paragraph">Located between two and seven degrees north of the Equator, Malaysia is formed by 13 states – Kelantan, Terengganu, Pahang, Johor, Melaka, Negeri Sembilan, Selangor, Perak, Pulau Pinang, Kedah, Perlis, Sabah and Sarawak; and three Federal Territories – Kuala Lumpur, Putrajaya, and Labuan. Sabah, Sarawak and Labuan are located in East Malaysia, while others are in Peninsular Malaysia.</p>
+							<h2>Area and climate</h2>
+							<p class="paragraph">With an area of approximately 329,847 square kilometres, and warm tropical climate with temperatures ranging from 23°C to 32°C, Malaysia houses an infinite range of exciting tourism products throughout the year for visitors to explore and enjoy.</p>
+						</div>								
+					</div>
+					<div class="inner-wrap">
+						<div class="side-image-wrap-left">
+							<img class="side-image" src="https://www.cktravels.com/wp-content/uploads/2019/07/malaysia-2-week-itinerary-18-big-1150x767.jpg" alt="this is img">
+						</div>	
+						<div class="text-wrap-right">
+							<h2>History and economy</h2>
+							<p class="paragraph">The history of Malaysia started in the early 15th century with the establishment of the Melaka Sultanate. The country achieved independence on 31 August 1957 as the Federation of Malaya. Malaysia was formed in 1963 with the entry of Sabah and Sarawak.</p>
+							<p class="paragraph">Manufacturing constitutes the largest component of Malaysia's economy, while tourism and primary commodities, namely petroleum, palm oil and timber, are also major contributors to the country’s economy.</p>
+						</div>							
+					</div>
+					<div class="inner-wrap">
+						<div class="tower-wrap side-image-wrap-right">
+							<img class="twin-cover" src="./klcccover.png" alt="this is img">
+							<img class="twin-tower" src="./klcctower.png" alt="this is img">
+						</div>
+						<div class="spacer"></div>
+						<div class="text-wrap-left">
+							<h2>People and culture</h2>
+							<p class="paragraph">Malaysia is a fascinating country with a vibrant multicultural population. Besides the Malays and the native groups, immigrants from China, India, Indonesia and other parts of the world have all contributed to the multi-racial composition of its population.</p>
+							<p class="paragraph">Based on statistics from the Department of Statistics Malaysia, the country’s population in 2020 is estimated at 32.7 million people. Out of the 29.7 million citizens, the Bumiputera (Malays and Orang Asli or indigenous peoples) comprises 69.6 percent of the population, the Chinese (22.6 percent), and Indians (6.9 percent), while others (1.0 percent).</p>
+							<p class="paragraph">The country’s evolution into a cultural melting pot is evident in its unique blend of religions, traditions, festivals, languages, food, and many more. Its cultural diversity can also be largely attributed to the country’s long and ongoing interactions with the world and colonial rule by the British, the Portuguese and the Dutch. The country’s evolution into a cultural melting pot is evident in its unique blend of religions, traditions, festivals, languages, food, and many more. Its cultural diversity can also be largely attributed to the country’s long and ongoing interactions with the world and colonial rule by the British, the Portuguese and the Dutch.</p>
+						</div>				
+					</div>
+				</div>		
+			</div>
+			<div class="content tab-pane fade" id="enter-tab-pane" role="tabpanel" aria-labelledby="enter-tab" tabindex="0">
+				<div class="wrap">
+					<div class="inner-wrap">
+						<div class="side-image-wrap-right">
+							<img class="side-image" src="https://www.klia2.info/images/klia2/klia2-terminal-evening-view.jpg" alt="this is img">
+						</div>
+
+							<div class="text-wrap-left">
+								<h2>Getting To Malaysia</h2>
+								<p class="paragraph">Prepare for a stress-free journey by planning ahead! Before embarking on your adventure to the breathtaking country of Malaysia, equip yourself with essential information to ensure a smooth and enjoyable visit.</p>
+								<h2>By Air</h2>
+								<p class="paragraph">Situated in Sepang, Selangor, Kuala Lumpur International Airport Terminal 1 (KLIA) and Terminal 2 (KLIA 2) serve as the central entrance to Malaysia. These two airports, separated by a short distance of only two kilometers, are conveniently located approximately 50 kilometers away from the bustling capital city of Kuala Lumpur. A quick express train ride of 30 minutes connects Terminal 1(KLIA) and Terminal 2 (KLIA 2) to the vibrant hub of KL Sentral.</p>							
+	
+						</div>
+					</div>
+					<div class="inner-wrap">
+						<div class="side-image-wrap-left">
+							<img class="side-image" src="https://islamtics.com/wp-content/uploads/2020/01/malaysia-passport-1.jpg" alt="this is img">
+						</div>	
+
+						<div class="text-wrap-right">
+							<h2>Passports & Visas</h2>
+							<p>Before entering Malaysia, there are several requirements that visitors must meet. These include having a valid passport or document, obtaining a visa if necessary, possessing a valid return ticket and enough funds to cover expenses, and ensuring that visitors are not illegal immigrants. Additionally, visitors must fill out the Malaysia Digital Arrival Card (MDAC) 3 days before the departure date. You can visit the website to fill out your Malaysia Digital Arrival Card effortlessly.</p>
+							<p>ASEAN nationals, except Myanmar, can enjoy a stay of up to one (1) month without the need for a visa. For stays longer than one month, visas are necessary, except for citizens from Brunei and Singapore.
+
+								Malaysia Tourist Visa application can be applied at any nearest Malaysian Embassies and High Commissions Office Abroad. Application can also be made online through the eVISA Portal.
+								
+								To access the necessary information on Visa requirements for different countries, simply visit the official website of the Immigration Department of Malaysia.</p>
+						</div>	
+					</div>
+						
+
+				</div>
+			</div>
+			<div class="content tab-pane fade" id="guide-tab-pane" role="tabpanel" aria-labelledby="guide-tab" tabindex="0">
+				<div class="wrap">
+					<div class="inner-wrap">
+						<div class="side-image-wrap-right">
+							<img class="side-image" src="https://th.bing.com/th/id/OIP.sVPxGB2XibQ7y3duSgDPZAHaFG?rs=1&pid=ImgDetMain" alt="this is img">
+						</div>
+						<div class="text-wrap-left">
+							<h2>Currency</h2>
+							<p class="paragraph">The currency unit of the Malaysian currency is the Malaysian Ringgit, with the code MYR. It is commonly recognized by the symbol RM and is also referred to as Ringgit Malaysia.</p>
+							<p class="paragraph">Bank notes are available in various denominations, including RM1, RM5, RM10, RM20, RM50, and RM100. Coins, on the other hand, are issued in 5 sen, 10 sen, 20 sen, and 50 sen denominations.</p>
+							<p class="paragraph">In addition, for those who prefer a convenient, cashless experience, MY Tourist App offers a mobile payment solution specifically designed for international travellers visiting Malaysia. Furthermore, the country has embraced digital payment methods such as Touch N Go, GrabPay, and Boost as well as bank transfers which are widely accepted and utilized by locals and tourists alike.</p>
+						</div>								
+					</div>
+					<div class="inner-wrap">
+						<div class="side-image-wrap-left">
+							<img class="side-image" src="https://www.malaysia.travel/img/about-travel-guide-1.jpg" alt="this is img">
+						</div>	
+						<div class="text-wrap-right">
+							<h2>Food & Drinks</h2>
+							<p>When it comes to culinary delights, Malaysia has gained international fame for its diverse selection of food and beverages. The local cuisine is a definite crowd-pleaser and a must-try for tourists visiting the country. Immerse yourself in the tantalizing flavours of Malay, Indian, Chinese, and other cuisines Malaysia proudly offers.</p>
+							<h2>Weather</h2>
+							<p>With its perpetual warm climate, Malaysia is famous for its tropical setting. Throughout the day, the sun's rays can be scorching, necessitating the appropriate attire to combat the heat.</p>
+						</div>							
+					</div>
+				</div>
+				
+			</div>
+		  </div>
+
+		  <div class="content-footer">
+			<div class="footer-wrap">
+				<div class="footer">		
+					<div class="footer-menu">
+						<p class="footer-headline">
+							discover<br>malaysia
+						</p>      
+						<a href="./about.html">About Malaysia</a>
+						<a href="./experience.html">Experience</a>	
+						<a href="./hotel.html">Hotel</a>	
+					</div>
+					<div class="footer-menu">
+						<p class="footer-headline">OTHERS</p>
+						<a href="./gallery.html">Gallery</a>
+						<a href="./alert.html">Travel Alert</a>
+						<a href="./weather.html">Weather</a>
+						<a href="./contact.html">Contact Us</a>
+					</div>
+					<div class="footer-menu">
+						<p class="footer-headline">FOLLOW US</p>
+						<div class="social-media">
+							<a href="https://www.instagram.com/malaysia.truly.asia/"><i class="fa fa-brands fa-instagram"></i></a>
+							<a href="https://www.youtube.com/user/tminternet"><i class="fa fa-brands fa-youtube"></i></a>
+							<a href="https://www.facebook.com/malaysia.travel.my"><i class="fa fa-brands fa-facebook"></i></a>				
+						</div>										
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="#" class="back-to-top">
+			&#8679; <!-- This is an up arrow symbol -->
+		</a>
+		
+		<script>
+
+			const tower = document.getElementsByClassName('tower-wrap')[0];
+	
+	
+			function towerEffect(){
+				var rect = tower.getBoundingClientRect();
+				if (rect.top >= -200 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+					tower.classList.add('scroll');
+				} else{
+					tower.classList.remove('scroll');
+				}
+			}
+	
+			window.addEventListener('scroll',towerEffect);
+	
+			//cookie
+			if (localStorage.getItem('cookieSeen') != 'shown') {
+				$('.cookie-banner').delay(2000).fadeIn();
+				localStorage.setItem('cookieSeen','shown')
+			};
+				$('.close').click(function() {
+				$('.cookie-banner').fadeOut();
+			})
+			
+		</script>
+		<script src="./login.js" type="text/javascript"></script>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+	</body>
+
+
+    
+
+
+
+
+</html>

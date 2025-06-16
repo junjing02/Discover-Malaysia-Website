@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia</title>
+    <link rel="icon" type=image/x-icon href="https://cdn-icons-png.flaticon.com/512/2151/2151402.png">
+
+    <link rel="stylesheet" href="./component.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"
+        referrerpolicy="no-referrer"></script>
+
+    <style>
+        .map-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            min-height: 100px;
+            width: 100%;
+
+        }
+
+        .title p {
+            font-size: 50px;
+            line-height: 50px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            color: gray;
+            text-decoration: underline #97cba9;
+        }
+
+        .content {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title p {
+            font-size: 36px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    background-color: #25D366;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.whatsapp-button i{
+    margin-right: 5px;
+}
+
+.whatsapp-button:hover {
+    background-color: #1EBE57;
+}
+
+.whatsapp-button i {
+    margin-right: 8px;
+}
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .col-md-6 {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .map-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        address p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        address p strong {
+            font-weight: bold;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+        .btn-primary:focus,
+        .btn-primary:active {
+            box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id='logout-item' style='display: none'>
+        <p>
+            How are you ？
+          </p>
+        <button class='logoutbtn'>LOGOUT</button>
+        <button class='cancelbtn'>CANCEL</button>
+    </div>
+
+         
+    <div class="menu">
+        <nav role="navigation" class="nav-menu">
+            <a href="./index.html" aria-current="page" class="menu-item-wrap">
+                <div class="menu-item">1M</div>
+                <div class="menu-item-deco-line"></div>
+            </a>
+            <a href="./about.html" aria-current="page" class="menu-item-wrap">
+                <div class="menu-item">About</div>
+                <div class="menu-item-deco-line"></div>
+            </a>
+            <a href="./experience.html" aria-current="page" class="menu-item-wrap">
+                <div class="menu-item">Experience</div>
+                <div class="menu-item-deco-line"></div>
+            </a>
+            <a href="./hotel.html" aria-current="page" class="menu-item-wrap">
+                <div class="menu-item">Hotel</div>
+                <div class="menu-item-deco-line"></div>
+            </a>
+            <a href="./alert.html" aria-current="page" class="menu-item-wrap">
+                <div class="menu-item">Alert</div>
+                <div class="menu-item-deco-line"></div>
+            </a>
+            <button class="menu-item-wrap" id="login">
+                <div class="menu-item">Login</div>				
+            </button>
+            <button class="menu-item-wrap" id="logout">
+                <div class="menu-item" id="user"></div>				
+            </button>
+        </nav>
+    </div>
+
+    <div class="mobileMenu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="./index.html" style="margin: 10px 20px">1MALAYSIA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                style="margin: 10px 20px">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="mmenu">
+                        <a class="nav-link" href="./about.html">
+                            <div class="menu-item">About</div>
+                        </a>
+                    </li>
+                    <li class="mmenu">
+                        <a class="nav-link" href="./experience.html">
+                            <div class="menu-item">Experience</div>
+                        </a>
+                    </li>
+                    <li class="mmenu">
+                        <a class="nav-link" href="./hotel.html">
+                            <div class="menu-item">Hotel</div>
+                        </a>
+                    </li>
+                    <li class="mmenu">
+                        <a class="nav-link" href="./alert.html">
+                            <div class="menu-item">Alert</div>
+                        </a>
+                    </li>
+                    <li class="mmenu">
+                        <a class="nav-link" href="#" role="button" id="logoutm">
+                            <div class="menu-item">
+                                <div class="menu-item" id="userm"></div>
+                            </div>
+                        </a>
+                        <a class="nav-link" href="#" role="button" id="loginm">
+                            <div class="menu-item">login								
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="content">
+
+        <div class="title">
+            <p>Contact Us</p>
+        </div>
+
+        <div class="container my-5">
+            <!-- Address and Contact Information -->
+            <div class="row mb-4">
+                <div class="mx-5 my-5">
+                    <div class="col-md-6">
+                        <h2>Address</h2>
+                        <address>
+                            <p><strong>Our Office:</strong></p>
+                            <p>Faculty of Information and Communication Technology (FICT)</p>
+                            <p>31900 Kampar, Perak</p>
+                            <p><strong>Phone:</strong> 05-4688888<a href="https://wa.me/6054688888" target="_blank" class="whatsapp-button">
+                                <i class="fa fa-whatsapp"></i> Chat Now
+                            </a>
+                            </p>
+                            <p><strong>Email:</strong> info@utar.edu.my</p>
+                        </address>
+                    </div>
+                    <div class="map-container col-md-6" style="width: 80%">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48967.04624185321!2d101.13862644140537!3d4.333591831118869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d4b8891f2267f3%3A0x9d87f65e98ddc1a1!2sUniversiti%20Tunku%20Abdul%20Rahman%20Kampar%20Campus!5e0!3m2!1sen!2smy!4v1686614058017!5m2!1sen!2smy&zoom=16"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                    </div>
+
+                </div>
+                <!-- Enquiries Form -->
+                <div class="col-md-6 mx-5 my-5">
+                    <h2>Enquiries</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <a href="#" class="back-to-top">
+        &#8679; <!-- This is an up arrow symbol -->
+    </a>
+
+    <div class="content-footer">
+        <div class="footer-wrap">
+            <div class="footer">		
+                <div class="footer-menu">
+                    <p class="footer-headline">
+                        discover<br>malaysia
+                    </p>      
+                    <a href="./about.html">About Malaysia</a>
+                    <a href="./experience.html">Experience</a>	
+                    <a href="./hotel.html">Hotel</a>	
+                </div>
+                <div class="footer-menu">
+                    <p class="footer-headline">OTHERS</p>
+                    <a href="./gallery.html">Gallery</a>
+                    <a href="./alert.html">Travel Alert</a>
+                    <a href="./weather.html">Weather</a>
+                    <a href="./contact.html">Contact Us</a>
+                </div>
+                <div class="footer-menu">
+                    <p class="footer-headline">FOLLOW US</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/malaysia.truly.asia/"><i class="fa fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/user/tminternet"><i class="fa fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/malaysia.travel.my"><i class="fa fa-brands fa-facebook"></i></a>				
+                    </div>										
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Select the form element
+            const form = document.querySelector('form');
+            
+            // Add an event listener to the form
+            form.addEventListener('submit', function(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+                
+                // Show an alert
+                alert('Successfully submitted');
+                
+                // Optionally, you can reset the form or redirect after showing the alert
+                form.reset(); // Reset the form fields
+                // window.location.href = 'thank_you.html'; // Redirect to a thank you page
+            });
+        });
+    </script>
+            <script src="./login.js" type="text/javascript"></script>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+</body>
+
+</html>

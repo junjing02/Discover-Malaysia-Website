@@ -1,0 +1,59 @@
+.wrap div{  
+    margin-top: 50px;
+}
+
+.title p:first-child{
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.title p:last-child{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.video-wrap {
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.video-wrap video {
+    width: 60vw;
+}
+
+.wrap{
+    display: block;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.text-wrap h1{
+    padding-bottom: 20px;
+}
+.text-wrap p{
+    padding-bottom: 10px;
+}
+.text-wrap h3{
+    padding: 15px 0;
+}
+.text-wrap img{
+    width: 60vw;
+    padding-bottom: 20px;
+}
+
+.card{
+    height: 500px;
+}
+.card-wrapper{
+    width: 60vw;
+}

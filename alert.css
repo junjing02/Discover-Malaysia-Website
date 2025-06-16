@@ -1,0 +1,42 @@
+.img{
+    text-align: center;
+}
+
+img{
+    width: 60%;
+    min-width: 800px;
+    padding: 20px;
+}
+
+.container{
+    display: flex;
+    justify-content: center ;
+}
+
+@media screen and (max-width: 990px) {
+    img{
+        min-width: 0px;
+        width: 100%;
+    }
+}
+
+.title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 430px;
+    width: 100%;
+}
+
+.title p{
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: gray;
+    text-decoration: underline #97cba9;
+}
+

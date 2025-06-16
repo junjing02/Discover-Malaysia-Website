@@ -1,0 +1,55 @@
+.table-wrap{
+    display: flex;
+    justify-content: center;
+    margin: 100px auto;
+}
+
+td{
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    min-height: 100px;
+    width: 100%;
+}
+
+.title p{
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: gray;
+    text-decoration: underline #97cba9;
+}
+
+.datetime{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    min-height: 100px;
+    width: 100%;
+}
+
+.datetime p{
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: gray;
+    margin-left: 50px;
+    margin-right: 50px;
+}
