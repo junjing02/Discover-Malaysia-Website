@@ -1,4 +1,4 @@
-# Discover Malaysia Responsive Website
+# Discover Malaysia Website
 
 **Course:** Front-End Web Development
 
